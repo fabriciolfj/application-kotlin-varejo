@@ -1,1 +1,14 @@
-# application-kotlin-varejo
+# Aplicações para simular compra e venda de produtos
+- Afim de demonstrar as vantagens em adotar o kotlin em desenvolvimento backend, sobre o java, teremos os serviços abaixo.
+- Inicialmente com 3 serviços:
+  - gestão de compra
+    - controle de estoque
+    - pedidos de compra
+    - cadastro de fornecedores
+    - cadastro de produtos
+  - gestão de faturamento
+    - pedido de venda
+    - cadastro de clientes 
+  - calculo de impostos (intuito e simular um ambiente real, e não tratar todas as leis tributárias a finco)
+    - calculo imposto sobre nf
+    - apuração de impostos (icms, pis, cofins) 
