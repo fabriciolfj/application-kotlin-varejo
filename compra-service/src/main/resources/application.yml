@@ -1,1 +1,31 @@
+server:
+  port: 8080
+  shutdown: graceful
+  tomcat:
+    accept-count: 100
+    connection-timeout: 2000
+    max-connections: 8192
+    threads:
+      max: 200
+      min-spare: 10
 
+spring:
+  application:
+    name: compra-service
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  datasource:
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 3
+      idle-timeout: 10000
+      connection-timeout: 50000
+      pool-name: compra-pool
+    url: jdbc:mysql://localhost:3306/compra
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL57Dialect
+      ddl-auto: validate
+    show-sql: true
