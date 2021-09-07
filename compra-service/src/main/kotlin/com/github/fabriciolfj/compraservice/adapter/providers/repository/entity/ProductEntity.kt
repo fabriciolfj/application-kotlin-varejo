@@ -1,6 +1,5 @@
 package com.github.fabriciolfj.compraservice.adapter.providers.repository.entity
 
-import java.math.BigDecimal
 import javax.persistence.*
 
 @Entity
@@ -11,6 +10,9 @@ data class ProductEntity(
     var id: Long?,
     @Column(name = "describe_name")
     val describe: String,
-    val price: BigDecimal,
-    val code: String
-)
+    val code: String,
+    @OneToMany(cascade = [CascadeType.REMOVE], mappedBy = "productEntity")
+    var prices: List<ProductPriceEntity>) {
+
+    constructor() : this(0L, "", "", emptyList())
+}
