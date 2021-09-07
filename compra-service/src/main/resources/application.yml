@@ -29,3 +29,5 @@ spring:
       dialect: org.hibernate.dialect.MySQL57Dialect
       ddl-auto: validate
     show-sql: true
+url:
+  providers: http://localhost:9090/api/v1/providers
