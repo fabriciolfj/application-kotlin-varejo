@@ -1,6 +1,6 @@
 package com.github.fabriciolfj.compraservice.domain
 
-data class Product(var code: String? = null, val describe: String, val prices: List<ProductPrice>) {
+data class Product(var code: String, val describe: String, var prices: List<ProductPrice>) {
 
-    constructor(describe: String) : this(null, describe, emptyList())
+    constructor(code: String, describe: String) : this(code, describe, emptyList())
 }

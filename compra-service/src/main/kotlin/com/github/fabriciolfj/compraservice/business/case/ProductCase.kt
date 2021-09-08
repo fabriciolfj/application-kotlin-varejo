@@ -6,7 +6,6 @@ import com.github.fabriciolfj.compraservice.domain.Product
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.lang.RuntimeException
-import java.util.*
 
 @Component
 class ProductCase {
@@ -18,11 +17,11 @@ class ProductCase {
 
     fun execute(product: Product) : String {
         product.apply {
-            this.code = UUID.randomUUID().toString()
+            this.prices = findProduct.findPrices(product.code)
             saveProduct.save(this);
         }
 
-        return product.code ?: throw RuntimeException("Code fail generated")
+        return product.code
     }
 
     fun execute(code: String) : Product {

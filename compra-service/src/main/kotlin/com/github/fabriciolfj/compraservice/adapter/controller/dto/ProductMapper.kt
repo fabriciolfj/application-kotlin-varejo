@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 class ProductMapper {
 
     fun toDomain(request: ProductRequest) =
-        Product(request.describe)
+        Product(request.code, request.describe)
 
     fun toResponse(code: String) =
         ProductResponse(code)
