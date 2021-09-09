@@ -34,6 +34,8 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation("io.springfox:springfox-boot-starter:3.0.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation("io.springfox:springfox-swagger2:3.0.0")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")

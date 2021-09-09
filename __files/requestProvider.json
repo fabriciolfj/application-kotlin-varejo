@@ -1,0 +1,13 @@
+{
+  "request": {
+    "url": "/api/v1/providers/{code}",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "body": "[{ \"provider\": \"data\","price": 10.98, "date": "10-10-2021" },{\"provider"\: \"data"\, \"price\": 9.15, \"date\": "10-08-2021"},{\"provider\": \"data\",\"price\": 7.69,\"date\": \"10-11-2021\"}]",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

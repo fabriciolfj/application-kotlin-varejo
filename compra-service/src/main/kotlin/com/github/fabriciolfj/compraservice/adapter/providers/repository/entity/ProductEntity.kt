@@ -11,7 +11,7 @@ data class ProductEntity(
     @Column(name = "describe_name")
     val describe: String,
     val code: String,
-    @OneToMany(cascade = [CascadeType.REMOVE], mappedBy = "productEntity")
+    @OneToMany(cascade = [CascadeType.REMOVE, CascadeType.PERSIST, CascadeType.MERGE], mappedBy = "productEntity")
     var prices: List<ProductPriceEntity>) {
 
     constructor() : this(0L, "", "", emptyList())

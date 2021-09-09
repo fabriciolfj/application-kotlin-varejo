@@ -9,7 +9,7 @@ import javax.persistence.*
 data class ProductPriceEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
+    var id: Long?,
     var price: BigDecimal,
     var provider: String,
     @Column(name = "last_date")
