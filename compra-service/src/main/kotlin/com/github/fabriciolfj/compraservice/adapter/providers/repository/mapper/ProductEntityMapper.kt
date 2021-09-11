@@ -24,7 +24,13 @@ class ProductEntityMapper {
             }
         }
 
-        fun toEntityPrices(prices: List<ProductPrice>, entity: ProductEntity) : List<ProductPriceEntity> {
+        fun toEntity(prices: List<ProductPrice>, entity: ProductEntity) : ProductEntity {
+            var prices = prices.map { ProductPriceEntity(null, it.price, it.provider, it.date, entity) }
+            entity.prices = prices
+            return entity
+        }
+
+        private fun toEntityPrices(prices: List<ProductPrice>, entity: ProductEntity) : List<ProductPriceEntity> {
             return prices.map { ProductPriceEntity(null, it.price, it.provider, it.date, entity) }
         }
     }

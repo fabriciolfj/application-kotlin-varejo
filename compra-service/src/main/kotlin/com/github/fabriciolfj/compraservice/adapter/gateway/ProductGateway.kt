@@ -32,9 +32,7 @@ class ProductGateway : SaveProduct, FindProduct {
 
         entityBase.map { entityPersited ->
             productPriceRepository.deleteAllByProduct(entityPersited.id!!)
-            var entityPrices = ProductEntityMapper.toEntityPrices(product.prices, entityPersited)
-            entityPersited.prices = entityPrices
-            productRepository.save(entityPersited)
+            productRepository.save(ProductEntityMapper.toEntity(product.prices, entityPersited))
         }.orElseGet {
             val entity = ProductEntityMapper.toEntity(product)
             productRepository.save(entity)
