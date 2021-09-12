@@ -20,7 +20,7 @@ class ProductEntityMapper {
         fun toDomain(entity: ProductEntity) : Product {
             return entity.run {
                 val productPrices = this.prices.map { ProductPrice(it.provider, it.price, it.lastDate) }.toList()
-                Product(this.code, this.describe, productPrices)
+                Product(this.code, this.describe, productPrices,  "")
             }
         }
 
