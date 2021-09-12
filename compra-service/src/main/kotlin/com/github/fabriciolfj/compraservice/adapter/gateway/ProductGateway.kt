@@ -4,7 +4,6 @@ import com.github.fabriciolfj.compraservice.adapter.providers.http.ProviderPrice
 import com.github.fabriciolfj.compraservice.adapter.providers.http.client.ProviderClient
 import com.github.fabriciolfj.compraservice.adapter.providers.repository.ProductPriceRepository
 import com.github.fabriciolfj.compraservice.adapter.providers.repository.ProductRepository
-import com.github.fabriciolfj.compraservice.adapter.providers.repository.entity.ProductEntity
 import com.github.fabriciolfj.compraservice.adapter.providers.repository.mapper.ProductEntityMapper
 import com.github.fabriciolfj.compraservice.business.FindProduct
 import com.github.fabriciolfj.compraservice.business.SaveProduct
