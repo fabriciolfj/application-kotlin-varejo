@@ -7,4 +7,6 @@ data class ProductRequest(
     @field:NotBlank(message = "Describe not abandonment")
     val describe: String,
     @field:NotNull(message = "Price not null")
-    val code: String)
+    val code: String,
+    @field:NotBlank(message = "Classification not null")
+    val classification: String)
